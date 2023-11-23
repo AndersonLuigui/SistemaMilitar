@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Militar</title>
+  <style>
+    body {
+      display: flex;
+    }
+
+    #consultaDisplay {
+      width: 30%;
+    }
+
+    #exibicaoDisplay {
+      width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema Militar</h1>
+
+  <!-- Consulta Display -->
+  <div id="consultaDisplay">
+    <h2>Consulta</h2>
+    <label for="forcaListBox">Escolha a Força Militar:</label>
+    <select id="forcaListBox" onchange="consultarMilitares()">
+      <option value="Marinha">Marinha</option>
+      <option value="Exército">Exército</option>
+      <option value="Aeronáutica">Aeronáutica</option>
+    </select>
+
+    <div id="nomesMilitares"></div>
+  </div>
+
+  <!-- Exibicao Display -->
+  <div id="exibicaoDisplay">
+    <h2>Militares Selecionados</h2>
+    <ul id="militaresSelecionados"></ul>
+  </div>
+
+
+</body>
+</html>
