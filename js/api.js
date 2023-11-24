@@ -7,7 +7,6 @@ const connection = mysql.createConnection({
   database: 'database-1',
 });
 
-// Função para obter militares do banco de dados
 const obterMilitaresDoBanco = () => {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM Militares', (error, results) => {
