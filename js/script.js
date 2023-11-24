@@ -1,4 +1,24 @@
-<script>
+const urlApi = 'http://localhost:3000'; // Substitua pela URL real da sua API
+
+// Função para obter militares do banco de dados
+const obterMilitaresDoBanco = async () => {
+  try {
+    const response = await fetch(`${urlApi}/obterMilitaresDoBanco`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Erro ao obter militares do banco de dados:', error);
+    throw error;
+  }
+};
+
+// Exemplo de uso da função no seu código
+const militaresDoBanco = await obterMilitaresDoBanco();
+console.log('Militares do banco:', militaresDoBanco);
+
+
+
+
 const militares = [
   { id: 1, nome: 'Militar1', forca: 'Marinha' },
   { id: 2, nome: 'Militar2', forca: 'Exército' },
@@ -49,4 +69,3 @@ function deselecionarMilitar(nome) {
     }
   });
 }
-</script>
